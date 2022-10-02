@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "클로저로 저장 프로퍼티를 정의할 때, ()를 붙이는 이유"
 categories: Swift
 ---

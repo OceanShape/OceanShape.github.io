@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "클래스에서의 참조형 변수 초기화"
 categories: C++
 ---

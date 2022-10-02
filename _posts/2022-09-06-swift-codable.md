@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Codable 정리"
 categories: Swift
 ---

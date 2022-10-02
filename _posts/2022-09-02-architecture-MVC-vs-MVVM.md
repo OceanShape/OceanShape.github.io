@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Swift에서의 MVC/MVVM 비교"
 categories: architecture
 ---

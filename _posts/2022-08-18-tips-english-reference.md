@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "영어 문서 번역 팁 정리"
 categories: tips
 ---

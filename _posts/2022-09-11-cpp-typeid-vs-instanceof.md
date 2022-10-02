@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "typeid(C++)/instanceof(Java) 차이점"
 categories: C++
 ---

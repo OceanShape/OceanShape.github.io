@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Swift 공식 구현 코드 찾기"
 categories: tips
 ---
