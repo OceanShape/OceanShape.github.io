@@ -20,7 +20,7 @@ title                    : "발견보다 창조"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ocean"
-description              : "상호작용에 관심이 많은 개발자"
+description              : 
 url                      : # the base hostname & protocol for your site e.g. "https://OceanShape.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "https://github.com/OceanShape/OceanShape.github.io"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Ocean"
   avatar           : "/assets/images/SeasideKingdom.jpg"
-  bio              : "상호작용에 관심이 많은 개발자"
+  bio              : 
   location         : "Republic of Korea"
   email            :
   links:
@@ -278,3 +278,4 @@ defaults:
       comments: # true
       share: true
       related: true
+      classes: wide
