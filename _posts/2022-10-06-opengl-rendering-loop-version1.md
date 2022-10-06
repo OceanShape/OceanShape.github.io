@@ -4,8 +4,6 @@ title:  "버전별 렌더링 루프(OpenGL1)"
 categories: opengl
 ---
 
-OpenGL의 렌더링 방식과 사용하는 API, 구조는 버전을 거치며 많은 변화가 이루어졌다. 모두 사용할 일은 없지만 적어도 레퍼런스의 버전은 알 수 있어야 한다고 생각했고, 렌더링 루프를 공부할 겸 버전별 변화와 추가된 개념을 정리하기로 했다.
-
 - OpenGL버전별 코드 실행시 주의사항
     - 이전 버전의 렌더링을 테스트할 때에는, 아래 네 줄 코드를 반드시 지우고 진행할 것
     
@@ -104,4 +102,6 @@ OpenGL의 렌더링 방식과 사용하는 API, 구조는 버전을 거치며 �
         - `glVertexPointer` , `glColorPointer`의 기능을 활용하여 데이터를 불러오기 위함
             - `pointer` 매개변수(맨 마지막)의 값이 0일 경우, 현재 array buffer에 bind된 VBO를 `vertex`, `color` 값이 들어 있는 buffer의 offset으로 간주
             - 즉, 현재 VBO의 값을 읽어들임
-- 참고: [https://m.blog.naver.com/cjdeka3123/220947181159](https://m.blog.naver.com/cjdeka3123/220947181159)
+- 참고
+    - [https://m.blog.naver.com/cjdeka3123/220947181159](https://m.blog.naver.com/cjdeka3123/220947181159)
+    - [https://rito15.github.io/posts/opengl-study-04/](https://rito15.github.io/posts/opengl-study-04/)
