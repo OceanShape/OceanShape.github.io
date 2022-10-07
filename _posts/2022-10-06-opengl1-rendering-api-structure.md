@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "버전별 렌더링 루프(OpenGL1)"
+title:  "렌더링 API 및 구조(OpenGL 1.0)"
 categories: opengl
 ---
 
