@@ -60,7 +60,7 @@ categories: opengl
     // 데이터를 기반으로 그려냄
     glDrawArrays(GL_TRIANGLES, 0, vertices.length/3);
     ```
-- VBO
+- VBO(OpenGL 1.5 이후)
     - 목적: 데이터가 그대로라면, 처음 한 번만 GPU에 가져다 놓고 계속 사용하자!
         - `glVertexPointer`, `glColorPointer`에 CPU상의 데이터 대신, 미리 GPU의 VBO에 넣어 놓은 데이터의 포인터를 전달
     - `VBO(Vertex Buffer Object)`
