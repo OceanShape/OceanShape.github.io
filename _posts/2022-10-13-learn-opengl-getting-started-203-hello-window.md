@@ -62,11 +62,11 @@ categories: opengl
     // {{렌더링 루프}}
     while(!glfwWindowShouldClose(window))
     {
-    		processInput(window); // 입력 처리 함수
+        processInput(window); // 입력 처리 함수
     
-    		// 렌더링 로직 작성
-    		glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 지울 색상 설정
-    		glClear(GL_COLOR_BUFFER_BIT); // 화면 컬러 버퍼 삭제
+        // 렌더링 로직 작성
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 지울 색상 설정
+        glClear(GL_COLOR_BUFFER_BIT); // 화면 컬러 버퍼 삭제
     
         glfwSwapBuffers(window);
         glfwPollEvents();    
