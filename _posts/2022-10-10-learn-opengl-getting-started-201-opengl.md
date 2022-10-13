@@ -65,8 +65,8 @@ categories: opengl
         - 예시) 삼각형 대신 선을 그려야 한다고 전달할 때마다 OpenGL이 그려야하는 방식을 설정하는 context 변수를 변경하여 OpenGL의 state를 변경
             - OpenGL이 선을 그어야한다고 말하여 상태를 변경하자마자, 다음 드로잉 명령은 이제 선을 그리는 명령이 됩니다.
     - OpenGL에서는 아래 두 종류의 함수를 사용하여 작업
-        - 현재 상태를 기반으로 일부 작업을 수행하는 state-using 함수
-        - context를 변경하는 상태 변경 함수
+        - `state-setting`: context(= state)를 변경
+        - `state-using`: 현재 상태를 기반으로 일부 작업을 수행
 - Objects
     - OpenGL은 객체 개념이 존재함
         - OpenGL은 다른 언어의 많은 파생을 허용하지만, 결국 핵심은 C 라이브러리
