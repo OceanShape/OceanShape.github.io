@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "기본 렌더링 루프"
+title:  "Simple Rendering Loop(code)"
 categories: opengl
 ---
+
+- OpenGL 3.3 버전의 기본 코드를 정리한 페이지(수정 혹은 삭제 예정)
 
 ```cpp
 int main()
