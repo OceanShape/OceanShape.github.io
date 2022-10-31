@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rendering Pipeline 간단 정리"
+title:  "Rendering Pipeline"
 categories: opengl
 ---
 

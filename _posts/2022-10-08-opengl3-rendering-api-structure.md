@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "렌더링 API 및 구조(OpenGL 3.0)"
+title:  "Rendering API and structure(OpenGL 3.0)"
 categories: opengl
 ---
 
