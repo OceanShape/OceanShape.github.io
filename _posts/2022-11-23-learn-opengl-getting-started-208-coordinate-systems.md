@@ -69,22 +69,28 @@ categories: opengl
 ### In practice
 
 -   `model`, `view`, `projection` 행렬을 합성하면, 3D좌표를 2D좌표(NDC)로 만들 수 있다
-    <img src="https://user-images.githubusercontent.com/42532724/201527516-82d3af3a-3e06-43be-955f-9c60547c9dca.png"></p>
+    <p align="center"><img src="https://user-images.githubusercontent.com/42532724/201527516-82d3af3a-3e06-43be-955f-9c60547c9dca.png"></p>
 
     1. model matrix
     2. view matrix
 
     3. projection matrix
+
         - orthographic projection matrix
-          ![orthographic_frustum](https://user-images.githubusercontent.com/42532724/201527502-85d19b38-f133-482a-a336-ecf62927d002.png)
-          `detail::tmat4x4<T> glm::ortho(left, right, bottom, top, zNear, zFar)`
+
+            ![orthographic_frustum](https://user-images.githubusercontent.com/42532724/201527502-85d19b38-f133-482a-a336-ecf62927d002.png)
+            `detail::tmat4x4<T> glm::ortho(left, right, bottom, top, zNear, zFar)`
+
             - 매개변수 자료형 전부 `T const &`
                 - `left, right`: 좌/우 좌표 지정
                 - `bottom, top`: 아래/위의 좌표 지정
                 - `zNear, zFar`: 가까운 평면/먼 평면과의 거리
+
         - perspective projection matrix
-          ![perspective_frustum](https://user-images.githubusercontent.com/42532724/201527507-36744ab4-4b2b-4a90-aa7c-ded1af7bb105.png)
-          `detail::tmat4x4<T> glm::perspective(fovy, aspect, near, far)`
+
+            ![perspective_frustum](https://user-images.githubusercontent.com/42532724/201527507-36744ab4-4b2b-4a90-aa7c-ded1af7bb105.png)
+            `detail::tmat4x4<T> glm::perspective(fovy, aspect, near, far)`
+
             - 매개변수 자료형 전부 `T const &`
                 - `fovy`: field of view(view space의 크기를 각도로 설정)
                 - `aspect`: 화면 비율(width/height)
@@ -138,6 +144,6 @@ categories: opengl
             -   앞에 있을 경우 ⇒ 기존 fragment에 덮어 씌움(z-buffer도 갱신)
     -   사용법
 
-    1. depth testing enable 설정(초기에 한 번): `glEnable(GL_DEPTH_TEST)`
-    2. depth buffer 비우기(매 루프마다): `glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)`
-     <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203484882-c0885fc8-8487-4225-9b68-4eaf8b2467a8.jpg" width="40%"></p>
+        1. depth testing enable 설정(초기에 한 번): `glEnable(GL_DEPTH_TEST)`
+        2. depth buffer 비우기(매 루프마다): `glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)`
+         <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203484882-c0885fc8-8487-4225-9b68-4eaf8b2467a8.jpg" width="40%"></p>
