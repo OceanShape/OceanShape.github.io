@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Learn OpenGL Getting started 2-8. Coordinate Systems"
+categories: opengl
+---
+
 -   Learn OpenGL은 접근 방식에 맞게, 각 좌표계를 기준으로 변환 단계를 설명한다. 개인적으로 변환의 과정과 입/출력을 파이프라인처럼 정리하는 게 편해서, 각 단계의 동작에 초점을 맞춰보았다.
 
 -   Vertex Shader 이후의 가정: 모든 점은 NDC(normalized device coordinates)에 존재
@@ -63,7 +69,7 @@
 ### In practice
 
 -   `model`, `view`, `projection` 행렬을 합성하면, 3D좌표를 2D좌표(NDC)로 만들 수 있다
-    ![composition](https://user-images.githubusercontent.com/42532724/201527516-82d3af3a-3e06-43be-955f-9c60547c9dca.png)
+    <img src="https://user-images.githubusercontent.com/42532724/201527516-82d3af3a-3e06-43be-955f-9c60547c9dca.png"></p>
 
     1. model matrix
     2. view matrix
@@ -71,10 +77,18 @@
     3. projection matrix
         - orthographic projection matrix
           ![orthographic_frustum](https://user-images.githubusercontent.com/42532724/201527502-85d19b38-f133-482a-a336-ecf62927d002.png)
-          `detail::tmat4x4<T> glm::ortho(left, right, bottom, top, zNear, zFar)` - 매개변수 자료형 전부 `T const &` - `left, right`: 좌/우 좌표 지정 - `bottom, top`: 아래/위의 좌표 지정 - `zNear, zFar`: 가까운 평면/먼 평면과의 거리
+          `detail::tmat4x4<T> glm::ortho(left, right, bottom, top, zNear, zFar)`
+            - 매개변수 자료형 전부 `T const &`
+                - `left, right`: 좌/우 좌표 지정
+                - `bottom, top`: 아래/위의 좌표 지정
+                - `zNear, zFar`: 가까운 평면/먼 평면과의 거리
         - perspective projection matrix
           ![perspective_frustum](https://user-images.githubusercontent.com/42532724/201527507-36744ab4-4b2b-4a90-aa7c-ded1af7bb105.png)
-          `detail::tmat4x4<T> glm::perspective(fovy, aspect, near, far)` - 매개변수 자료형 전부 `T const &` - `fovy`: field of view(view space의 크기를 각도로 설정) - `aspect`: 화면 비율(width/height) - `near/far`: 가까운 평면/먼 평면과의 거리
+          `detail::tmat4x4<T> glm::perspective(fovy, aspect, near, far)`
+            - 매개변수 자료형 전부 `T const &`
+                - `fovy`: field of view(view space의 크기를 각도로 설정)
+                - `aspect`: 화면 비율(width/height)
+                - `near/far`: 가까운 평면/먼 평면과의 거리
 
 -   만든 matrix를 uniform으로 선언하여 vertex shader에 전달
 
@@ -110,8 +124,9 @@
     <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203484122-06a9237d-4744-4c3c-a778-4690001ed2ff.png" width="40%"></p>
 
     -   지금까지의 결과물: 일부가 덮혀서 어색함. 왜 이상하게 그려질까?
-        → OpenGL이 삼각형 단위로 그리기 때문에 발생하는 문제 - 이미 픽셀이 그려져 있는 위치에 픽셀을 또 그린다
-        ⇒ 해결 방법: z-buffer(depth buffer)
+        → OpenGL이 삼각형 단위로 그리기 때문에 발생하는 문제
+        -   이미 픽셀이 그려져 있는 위치에 픽셀을 또 그린다
+            ⇒ 해결 방법: z-buffer(depth buffer)
     -   OpenGL은 z-buffer에 모든 깊이 정보를 저장
         -   GLFW가 버퍼를 자동으로 생성함
         -   깊이 정보는 각 fragment의 z값으로 저장
@@ -121,5 +136,8 @@
         -   current fragment의 출력을 시도할 때마다, z-buffer에 들어있는 깊이 값과 비교
             -   기존 fragment보다 뒤에 있을 경우 ⇒ 무시됨
             -   앞에 있을 경우 ⇒ 기존 fragment에 덮어 씌움(z-buffer도 갱신)
-    -   사용법 - depth testing enable 설정(초기에 한 번): `glEnable(GL_DEPTH_TEST)` - depth buffer 비우기(매 루프마다): `glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)`
-    <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203484882-c0885fc8-8487-4225-9b68-4eaf8b2467a8.jpg" width="40%"></p>
+    -   사용법
+
+    1. depth testing enable 설정(초기에 한 번): `glEnable(GL_DEPTH_TEST)`
+    2. depth buffer 비우기(매 루프마다): `glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)`
+     <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203484882-c0885fc8-8487-4225-9b68-4eaf8b2467a8.jpg" width="40%"></p>
