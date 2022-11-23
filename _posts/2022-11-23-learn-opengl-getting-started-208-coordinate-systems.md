@@ -5,8 +5,8 @@
 
 ### 오른손 좌표계
 
-<p align="center"><img src="https://user-images.githubusercontent.com/42532724/203482439-7b4878e6-8088-45bf-aa85-dc0e75275933.png">
-<img src="https://user-images.githubusercontent.com/42532724/203482444-63b093a7-6b04-45ca-b623-8b03347991c9.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/42532724/203482439-7b4878e6-8088-45bf-aa85-dc0e75275933.png" width="40%">
+<img src="https://user-images.githubusercontent.com/42532724/203482444-63b093a7-6b04-45ca-b623-8b03347991c9.png" width="50%"></p>
 
 -   관례상 OpenGL은 오른손 좌표계를 사용
     -   Z축이 반대 방향인 왼손 좌표계는 DirectX에서 사용한다
