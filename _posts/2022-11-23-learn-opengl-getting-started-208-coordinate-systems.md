@@ -79,6 +79,7 @@ categories: opengl
         - orthographic projection matrix
 
             ![orthographic_frustum](https://user-images.githubusercontent.com/42532724/201527502-85d19b38-f133-482a-a336-ecf62927d002.png)
+
             `detail::tmat4x4<T> glm::ortho(left, right, bottom, top, zNear, zFar)`
 
             - 매개변수 자료형 전부 `T const &`
@@ -89,6 +90,7 @@ categories: opengl
         - perspective projection matrix
 
             ![perspective_frustum](https://user-images.githubusercontent.com/42532724/201527507-36744ab4-4b2b-4a90-aa7c-ded1af7bb105.png)
+
             `detail::tmat4x4<T> glm::perspective(fovy, aspect, near, far)`
 
             - 매개변수 자료형 전부 `T const &`
