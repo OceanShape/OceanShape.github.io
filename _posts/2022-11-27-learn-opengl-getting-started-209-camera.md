@@ -13,7 +13,7 @@ categories: opengl
 
 - 하지만, scene의 모든 오브젝트를 반대 방향으로 이동시켜, 착시를 일으킬 순 있다.
 
-![camera_axes](https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png">
 
 - 카메라를 정의하기 위해서는 아래의 정보가 필요
     - 카메라의 위치(World Space 기준)
@@ -70,7 +70,10 @@ categories: opengl
     - n(예를 들어 3)개의 직각(또는 비선형)인 축으로 좌표 space를 만들 경우
     - n개의 축과 이동 벡터가 한 번에 포함된 데이터(행렬) 생성 가능
     - 어떠한 벡터든지 이 행렬과 곱하여 이 좌표 space로 변환 가능
+
+
 <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885472-9bf29b2b-2616-48ca-88f0-560f5bcf6095.jpg">
+
 
 - R은 오른쪽 벡터, U는 위쪽 벡터, D는 방향 벡터, P는 카메라의 위치 벡터
     - 위치 벡터가 반대로 되어 있는 이유
