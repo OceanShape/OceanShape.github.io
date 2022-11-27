@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learn OpenGL Getting started 2-9. Camera"
+title:  "Learn OpenGL Getting started 2-9. Camera"
 categories: opengl
 ---
 
@@ -13,17 +13,18 @@ categories: opengl
 
 - 하지만, scene의 모든 오브젝트를 반대 방향으로 이동시켜, 착시를 일으킬 순 있다.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png">
+    <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png">
 
-- 카메라를 정의하기 위해서는 아래의 정보가 필요
-    - 카메라의 위치(World Space 기준)
-    - 바라보고 있는 방향
-    - 카메라의 오른쪽을 가리키는 벡터
-    - 카메라의 위쪽을 가리키는 벡터
+    - 카메라를 정의하기 위해서는 아래의 정보가 필요
+        - 카메라의 위치(World Space 기준)
+        - 바라보고 있는 방향
+        - 카메라의 오른쪽을 가리키는 벡터
+        - 카메라의 위쪽을 가리키는 벡터
 
-⇒ 카메라의 위치를 원점으로 하고, 3개의 수직인 축을 가진 좌표계를 만듦
+    ⇒ 카메라의 위치를 원점으로 하고, 3개의 수직인 축을 가진 좌표계를 만듦
 
-- 코드에서는 사용 방법이 약간 다르므로, 정의가 가능하다는 사실만 기억하자
+    - 코드에서는 사용 방법이 약간 다르므로, 정의가 가능하다는 사실만 기억하자
+
 - 정의하는 과정
 
     1. 카메라 위치
