@@ -195,7 +195,7 @@ view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
         3. 두 공식 합치기
             - 실제 단위 벡터는 r이기 때문에, yaw와 pitch 빗변의 길이는 1이 아님
 
-                ⇒ r에서 계산한 빗변 p의 값을 x/z에 곱해주어야 한다
+                ⇒ r에서 계산한 빗변 p의 값을 x와 z에 곱해주어야 한다
         <center><img src="https://user-images.githubusercontent.com/42532724/204139413-cdbcc542-8030-4d06-a672-747f7cb6395e.png" height="400"></center>
 
         - 최종 결과
