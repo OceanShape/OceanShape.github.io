@@ -12,7 +12,8 @@ categories: opengl
 **OpenGL 자체는 카메라의 개념과 친숙하지 않다**
 
 - 하지만, scene의 모든 오브젝트를 반대 방향으로 이동시켜, 착시를 일으킬 순 있다.
-    <p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png">
+
+    <center><img src="https://user-images.githubusercontent.com/42532724/203885469-188ee312-b399-468d-90ec-d1c40c5d3261.png"></center>
 
     - 카메라를 정의하기 위해서는 아래의 정보가 필요
         - 카메라의 위치(World Space 기준)
@@ -22,7 +23,7 @@ categories: opengl
 
     ⇒ 카메라의 위치를 원점으로 하고, 3개의 수직인 축을 가진 좌표계를 만듦
 
-    - 코드에서는 사용 방법이 약간 다르므로, 정의가 가능하다는 사실만 기억하자
+- 코드에서는 사용 방법이 약간 다르므로, 정의가 가능하다는 사실만 기억하자
 
 - 정의하는 과정
 
@@ -75,7 +76,7 @@ categories: opengl
     - n(예를 들어 3)개의 직각(또는 비선형)인 축으로 좌표 space를 만들 경우
     - n개의 축과 이동 벡터가 한 번에 포함된 데이터(행렬) 생성 가능
     - 어떠한 벡터든지 이 행렬과 곱하여 이 좌표 space로 변환 가능
-<p align="center"><img src="https://user-images.githubusercontent.com/42532724/203885472-9bf29b2b-2616-48ca-88f0-560f5bcf6095.jpg">
+<center><img src="https://user-images.githubusercontent.com/42532724/203885472-9bf29b2b-2616-48ca-88f0-560f5bcf6095.jpg"></center>
 
 - R은 오른쪽 벡터, U는 위쪽 벡터, D는 방향 벡터, P는 카메라의 위치 벡터
     - 위치 벡터가 반대로 되어 있는 이유
@@ -169,13 +170,13 @@ view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
         ```
 
 - 마우스 조작으로 시점을 회전하는 카메라 만들기
-    <p align="center"><img src="https://user-images.githubusercontent.com/42532724/204139410-7fce775e-8298-495f-b868-57b7a2010661.png">
+    <center><img src="https://user-images.githubusercontent.com/42532724/204139410-7fce775e-8298-495f-b868-57b7a2010661.png"></center>
 
     - Euler angles(오일러 각)은 3D상에서의 모든 회전을 나타낼 수 있는 3개의 값
         - `pitch`, `yaw`, `roll` 존재(단, 여기서는 `roll`값을 다루지 않음)
             - 오일러 각의 요소는 하나의 값으로 나타냄
     - 유도 과정
-        <p align="center"><img src="https://user-images.githubusercontent.com/42532724/204139407-1da417e4-2b66-4786-a81f-aabcaf2d28e3.png">
+        <center><img src="https://user-images.githubusercontent.com/42532724/204139407-1da417e4-2b66-4786-a81f-aabcaf2d28e3.png"></center>
 
         1. yaw
 
@@ -192,10 +193,10 @@ view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
             ```
 
         3. 두 공식 합치기
-            - 실제 단위 벡터는 r이기 때문에, yaw/pitch의 빗변의 길이는 1이 아님
+            - 실제 단위 벡터는 r이기 때문에, yaw와 pitch 빗변의 길이는 1이 아님
 
                 ⇒ r에서 계산한 빗변 p의 값을 x/z에 곱해주어야 한다
-        <p align="center"><img src="https://user-images.githubusercontent.com/42532724/204139413-cdbcc542-8030-4d06-a672-747f7cb6395e.png" height="400">
+        <center><img src="https://user-images.githubusercontent.com/42532724/204139413-cdbcc542-8030-4d06-a672-747f7cb6395e.png" height="400"></center>
 
         - 최종 결과
 
@@ -207,7 +208,7 @@ view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
 
             - 카메라로 보는 공간은 -z방향에 위치하므로, yaw의 초기값은 -90.0f이다
     - 마우스 입력/줌 확대 축소(코드 생략)
-        - 마우스 움직임을 통해 yaw/pitch 값 도출
+        - 마우스 움직임을 통해 yaw와 pitch 값 도출
             - yaw: 마우스 수평 움직임
             - pitch: 마우스 수직 움직임
             - 콜백 함수에서의 ypos 매개변수는 OpenGL 좌표축과 방향이 반대이므로, 부호를 뒤집어줘야 한다
